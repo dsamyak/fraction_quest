@@ -9,6 +9,7 @@ import { GameProvider } from './context/GameContext';
 import islandBg from './assets/island-hero-bg.png';
 import fractionIslandCover from './assets/fraction-island-cover.jpeg';
 import treasureMap from './assets/treasure-map.png';
+import intelliaLogo from './assets/intellia-logo.jpeg';
 
 function App() {
   return (
@@ -191,6 +192,25 @@ function Landing() {
           <span style={{ position: 'absolute', top: -12, left: -12, fontSize: '1.5rem' }}>⚓</span>
           <span style={{ position: 'absolute', top: -12, right: -12, fontSize: '1.5rem' }}>🧭</span>
 
+          {/* Intellia Logo badge */}
+          <div style={{
+            position: 'absolute', top: 14, left: '50%', transform: 'translateX(-50%)',
+            display: 'flex', alignItems: 'center', gap: '0.4rem',
+            background: 'rgba(255,255,255,0.9)',
+            border: '2px solid #B8860B',
+            borderRadius: 'var(--radius-full)',
+            padding: '0.25rem 0.75rem 0.25rem 0.25rem',
+            boxShadow: 'var(--shadow-sm)',
+          }}>
+            <img src={intelliaLogo} alt="Intellia 360" style={{
+              height: 28, width: 28, borderRadius: '50%', objectFit: 'cover',
+              border: '2px solid #B8860B',
+            }} />
+            <span style={{ fontFamily: 'var(--font-fun)', fontSize: '0.78rem', fontWeight: 700, color: 'var(--primary-dark)' }}>
+              Intellia 360
+            </span>
+          </div>
+
           {/* Title banner */}
           <div style={{
             background: 'linear-gradient(145deg, var(--secondary), var(--secondary-dark))',
@@ -351,6 +371,10 @@ function Landing() {
           zIndex: 5,
         }}
       >
+        <div style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem' }}>
+          <img src={intelliaLogo} alt="Intellia 360" style={{ height: 36, width: 36, borderRadius: '50%', objectFit: 'cover', border: '2px solid var(--treasure)' }} />
+          <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--treasure)' }}>Intellia 360</span>
+        </div>
         <div style={{ marginBottom: '0.5rem', fontSize: '1.5rem' }}>🏴‍☠️ ⛵ 🌊</div>
         Powered by <strong style={{ color: 'var(--treasure)' }}>Intellia 360</strong> – Learn Through Adventure
         <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', opacity: 0.5 }}>

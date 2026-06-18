@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import intelliaLogo from '../assets/intellia-logo.jpeg';
 
 /* ─── tiny helpers ─────────────────────────────────────────── */
 const px = (n) => `${n}px`;
@@ -430,7 +431,8 @@ function WorksheetHome() {
         <Link to="/" className="btn btn-secondary" style={{ fontSize: '0.8rem', padding: '0.4rem 0.8rem' }}>
           🏝️ Back to Harbor
         </Link>
-        <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', textShadow: '2px 2px 0 rgba(0,0,0,0.3)' }}>
+        <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', textShadow: '2px 2px 0 rgba(0,0,0,0.3)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <img src={intelliaLogo} alt="Intellia 360" style={{ height: 30, width: 30, borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(255,255,255,0.5)' }} />
           🗺️ Fractions Adventure Worksheet
         </div>
         <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
@@ -1251,8 +1253,10 @@ function WorksheetHome() {
               </div>
             </div>
 
-            <div style={{ marginTop: '1rem', fontFamily: 'var(--font-fun)', color: '#9CA3AF', fontSize: '0.85rem' }}>
-              Date: {date} &nbsp;|&nbsp; Powered by Intellia 360
+            <div style={{ marginTop: '1rem', fontFamily: 'var(--font-fun)', color: '#9CA3AF', fontSize: '0.85rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+              <span>Date: {date} &nbsp;|&nbsp; Powered by </span>
+              <img src={intelliaLogo} alt="Intellia 360" style={{ height: 20, width: 20, borderRadius: '50%', objectFit: 'cover' }} />
+              <span><strong>Intellia 360</strong></span>
             </div>
 
             <button className="btn btn-treasure no-print" onClick={() => window.print()} style={{ marginTop: '0.5rem', fontSize: '1rem' }}>

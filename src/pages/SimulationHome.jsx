@@ -5,6 +5,7 @@ import treasureMap from '../assets/treasure-map.png';
 import levelBeach from '../assets/level-beach.png';
 import levelBridge from '../assets/level-bridge.png';
 import levelVolcano from '../assets/level-volcano.png';
+import intelliaLogo from '../assets/intellia-logo.jpeg';
 
 function SimulationHome() {
   const { coins, xp, unlockedLevels, rank } = useGame();
@@ -53,6 +54,11 @@ function SimulationHome() {
           alignItems: 'center',
           gap: '0.5rem',
         }}>
+          <img src={intelliaLogo} alt="Intellia 360" style={{
+            height: 32, width: 32, borderRadius: '50%', objectFit: 'cover',
+            border: '2px solid rgba(255,255,255,0.5)',
+            boxShadow: '0 2px 6px rgba(0,0,0,0.3)',
+          }} />
           🏝️ Fraction Island Quest
         </div>
 
@@ -165,16 +171,20 @@ function SimulationHome() {
         bottom: 0,
         left: 0,
         width: '100%',
-        padding: '0.75rem',
-        textAlign: 'center',
+        padding: '0.5rem 1rem',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '0.5rem',
         fontSize: '0.8rem',
         fontFamily: 'var(--font-fun)',
-        color: 'rgba(27, 67, 50, 0.6)',
-        background: 'linear-gradient(180deg, rgba(224, 242, 254, 0), rgba(224, 242, 254, 0.95) 30%)',
+        color: 'rgba(27, 67, 50, 0.65)',
+        background: 'linear-gradient(180deg, rgba(224, 242, 254, 0), rgba(224, 242, 254, 0.97) 30%)',
         backdropFilter: 'blur(8px)',
         zIndex: 40,
       }}>
-        ⛵ Powered by Intellia 360 – "Every Fraction Unlocks a New Treasure!" 🏴‍☠️
+        <img src={intelliaLogo} alt="Intellia 360" style={{ height: 24, width: 24, borderRadius: '50%', objectFit: 'cover', border: '1.5px solid #B8860B' }} />
+        <span>⛵ Powered by <strong>Intellia 360</strong> – "Every Fraction Unlocks a New Treasure!" 🏴‍☠️</span>
       </footer>
     </div>
   );

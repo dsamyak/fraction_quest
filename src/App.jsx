@@ -7,7 +7,7 @@ import Level2 from './pages/Level2';
 import Level3 from './pages/Level3';
 import { GameProvider } from './context/GameContext';
 import islandBg from './assets/island-hero-bg.png';
-import monsterFriends from './assets/monster-friends.png';
+import fractionIslandCover from './assets/fraction-island-cover.jpeg';
 import treasureMap from './assets/treasure-map.png';
 
 function App() {
@@ -245,10 +245,10 @@ function Landing() {
             Solve clues, collect fraction coins, and find the legendary treasure!
           </p>
 
-          {/* Monster friends image */}
+          {/* Cover image */}
           <img
-            src={monsterFriends}
-            alt="Friendly fraction monsters"
+            src={fractionIslandCover}
+            alt="Fraction Island Cover"
             style={{
               width: '85%',
               maxWidth: 420,
@@ -256,6 +256,7 @@ function Landing() {
               display: 'block',
               filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.15))',
               borderRadius: 'var(--radius-lg)',
+              border: '3px solid #B8860B'
             }}
           />
 

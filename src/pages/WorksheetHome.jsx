@@ -16,10 +16,10 @@ const storySteps = [
   {
     step: 0,
     emoji: '🏴‍☠️',
-    world: 'The Harbor',
-    title: 'Welcome, Explorer!',
-    blackbeardSays: "Arrr! So ye want to find me legendary treasure? Then ye must prove yer fraction skills! Sign yer name in the logbook and prepare for the adventure of a lifetime!",
-    narrator: 'You arrive at Fraction Island. A ghostly pirate ship floats in the harbor, and the ghost of Captain Blackbeard himself beckons you aboard…',
+    world: 'बंदरगाह',
+    title: 'स्वागत है, खोजकर्ता!',
+    blackbeardSays: "अर्रर! तो तुम मेरे खजाने को खोजना चाहते हो? तो तुम्हें अपने भाग (fraction) कौशल को साबित करना होगा! लॉगबुक में अपना नाम साइन करो और जीवन भर के रोमांच के लिए तैयार हो जाओ!",
+    narrator: 'आप भाग (Fraction) द्वीप पर पहुंचते हैं। एक भूतिया समुद्री डाकू जहाज बंदरगाह में तैरता है, और कप्तान ब्लैकबियर्ड का भूत खुद आपको बुलाता है…',
     color: GREEN,
     bgGradient: 'linear-gradient(145deg, #E0F2FE, #F0F9FF)',
     borderColor: GREEN,
@@ -27,10 +27,10 @@ const storySteps = [
   {
     step: 1,
     emoji: '🗺️',
-    world: 'Half Hill Beach',
-    title: 'The Torn Map',
-    blackbeardSays: "Me treasure map was shattered by the storm! Each piece is coded with a fraction shape. Color the correct part and identify the fractions to reassemble it!",
-    narrator: "Waves crash on Half Hill Beach. Glowing map fragments wash ashore, each pulsing with fraction magic…",
+    world: 'हाफ हिल बीच',
+    title: 'फटा हुआ नक्शा',
+    blackbeardSays: "तूफान में मेरा खजाने का नक्शा टूट गया था! प्रत्येक टुकड़ा एक भाग (fraction) आकार के साथ कोडित है। सही हिस्से को रंगें और इसे फिर से जोड़ने के लिए भागों की पहचान करें!",
+    narrator: "हाफ हिल बीच पर लहरें टकराती हैं। चमकते हुए नक्शे के टुकड़े किनारे पर आ जाते हैं, प्रत्येक भाग (fraction) जादू के साथ धड़कता है…",
     color: '#0369A1',
     bgGradient: 'linear-gradient(145deg, #E0F2FE, #BFDBFE)',
     borderColor: OCEAN,
@@ -38,10 +38,10 @@ const storySteps = [
   {
     step: 2,
     emoji: '💎',
-    world: 'The Treasure Cove',
-    title: 'The Treasure Hunt',
-    blackbeardSays: "Buried in the cove are me treasure chests — but each one is labeled with a fraction! Match each fraction to the RIGHT chest by draggin yer ship to the correct port!",
-    narrator: "You discover a hidden cove sparkling with treasure chests. Each one has a fraction on it — Blackbeard's inventory system!",
+    world: 'खजाना गुफा',
+    title: 'खजाने की खोज',
+    blackbeardSays: "गुफा में मेरे खजाने के संदूक दबे हुए हैं — लेकिन हर एक पर एक भाग (fraction) लिखा है! अपने जहाज को सही बंदरगाह पर ले जाकर प्रत्येक भाग को सही संदूक से मिलाएं!",
+    narrator: "आप खजाने के संदूकों से जगमगाती एक छिपी हुई गुफा की खोज करते हैं। हर एक पर एक भाग (fraction) है — ब्लैकबियर्ड की सूची प्रणाली!",
     color: '#B45309',
     bgGradient: 'linear-gradient(145deg, #FDF6E3, #FEF3C7)',
     borderColor: GOLD,
@@ -49,10 +49,10 @@ const storySteps = [
   {
     step: 3,
     emoji: '⚔️',
-    world: 'The Pirate Academy',
-    title: 'Numerator vs. Denominator',
-    blackbeardSays: "Every pirate on me crew knows: the numerator is the TOP number, the denominator is the BOTTOM! Ye must learn to identify both before ye can decode me secret messages!",
-    narrator: "You find Blackbeard's old pirate academy, carved into a cliffside. Fraction lessons are etched on every wall!",
+    world: 'समुद्री डाकू अकादमी',
+    title: 'अंश बनाम हर (Numerator vs. Denominator)',
+    blackbeardSays: "मेरे दल का हर समुद्री डाकू जानता है: अंश (numerator) शीर्ष संख्या है, हर (denominator) निचली संख्या है! मेरे गुप्त संदेशों को समझने से पहले तुम्हें दोनों को पहचानना सीखना होगा!",
+    narrator: "आपको ब्लैकबियर्ड की पुरानी समुद्री डाकू अकादमी मिलती है, जिसे चट्टान में उकेरा गया है। हर दीवार पर भाग (fraction) के पाठ उकेरे गए हैं!",
     color: CORAL,
     bgGradient: 'linear-gradient(145deg, #FFF1F2, #FFE4E6)',
     borderColor: CORAL,
@@ -60,10 +60,10 @@ const storySteps = [
   {
     step: 4,
     emoji: '🧟',
-    world: 'The Haunted Maze',
-    title: 'The Fraction Monster Maze',
-    blackbeardSays: "Beware the fraction monsters lurkin in me old maze! Answer each question correctly to escape their clutches and find the path forward!",
-    narrator: "The map leads into a dark, winding maze. Glowing fraction monsters block every wrong turn. Only correct answers light the path ahead!",
+    world: 'प्रेतवाधित भूलभुलैया',
+    title: 'भाग (Fraction) राक्षस भूलभुलैया',
+    blackbeardSays: "मेरी पुरानी भूलभुलैया में छिपे भाग राक्षसों से सावधान रहें! उनके चंगुल से बचने और आगे का रास्ता खोजने के लिए प्रत्येक प्रश्न का सही उत्तर दें!",
+    narrator: "नक्शा एक अंधेरी भूलभुलैया की ओर ले जाता है। चमकते हुए भाग राक्षस हर गलत मोड़ को रोकते हैं। केवल सही उत्तर ही आगे का मार्ग प्रशस्त करते हैं!",
     color: PURPLE,
     bgGradient: 'linear-gradient(145deg, #F5F3FF, #EDE9FE)',
     borderColor: PURPLE,
@@ -71,10 +71,10 @@ const storySteps = [
   {
     step: 5,
     emoji: '🍕',
-    world: 'The Pizza Kingdom',
-    title: "The Pizza King's Challenge",
-    blackbeardSays: "Ahh, the Pizza King! He'll only let ye pass if ye can color the exact fraction of his pizza he demands — AND write the fraction! A fussy king, but his island is on the way to me volcano!",
-    narrator: "You enter a kingdom ruled by the generous but particular Pizza King. He slides a stack of pizzas across the table with a suspicious grin…",
+    world: 'पिज़्ज़ा साम्राज्य',
+    title: "पिज़्ज़ा किंग की चुनौती",
+    blackbeardSays: "आह, पिज़्ज़ा किंग! वह तुम्हें तभी जाने देगा जब तुम उसके पिज़्ज़ा के सटीक हिस्से को रंगोगे जो वह मांगता है — और भाग लिखोगे! एक उग्र राजा, लेकिन उसका द्वीप मेरे ज्वालामुखी के रास्ते पर है!",
+    narrator: "आप उदार लेकिन विशेष पिज़्ज़ा किंग द्वारा शासित एक साम्राज्य में प्रवेश करते हैं। वह एक संदिग्ध मुस्कान के साथ टेबल पर पिज़्ज़ा का ढेर सरका देता है…",
     color: '#C2410C',
     bgGradient: 'linear-gradient(145deg, #FFF7ED, #FFEDD5)',
     borderColor: '#C2410C',
@@ -82,10 +82,10 @@ const storySteps = [
   {
     step: 6,
     emoji: '🌉',
-    world: 'The Jungle River',
-    title: 'The Equivalent Fraction Bridge',
-    blackbeardSays: "The bridge across this jungle river was built with equivalent fraction stones — pairs of fractions that are EQUAL in value! Find the missing number in each pair to rebuild the bridge!",
-    narrator: "The ancient rope bridge has crumbled! Stone slabs with fraction equations are scattered everywhere. You must complete each equation to lay the planks across the river…",
+    world: 'जंगल नदी',
+    title: 'समान भाग (Equivalent Fraction) पुल',
+    blackbeardSays: "इस जंगल की नदी पर पुल समान भाग वाले पत्थरों से बनाया गया था — भागों के जोड़े जो मूल्य में समान (EQUAL) हैं! पुल को फिर से बनाने के लिए प्रत्येक जोड़ी में गायब संख्या खोजें!",
+    narrator: "प्राचीन रस्सी पुल गिर गया है! भाग समीकरणों वाले पत्थर के स्लैब हर जगह बिखरे हुए हैं। आपको नदी के पार तख्ते बिछाने के लिए प्रत्येक समीकरण को पूरा करना होगा…",
     color: GREEN,
     bgGradient: 'linear-gradient(145deg, #ECFDF5, #D1FAE5)',
     borderColor: GREEN,
@@ -93,10 +93,10 @@ const storySteps = [
   {
     step: 7,
     emoji: '⛰️',
-    world: 'The Comparison Peaks',
-    title: 'The Comparison Mountain',
-    blackbeardSays: "Ye must climb the Comparison Peaks to reach the volcano! Each ledge has two fractions — use >, < or = to compare them. Choose correctly and the ledge rises to let ye climb higher!",
-    narrator: "A towering mountain range blocks the path to the volcano. The only way up is through a series of fraction comparison challenges carved into each ledge…",
+    world: 'तुलना चोटियाँ',
+    title: 'तुलना पर्वत',
+    blackbeardSays: "ज्वालामुखी तक पहुँचने के लिए तुम्हें तुलना चोटियों पर चढ़ना होगा! प्रत्येक कगार पर दो भाग हैं — उनकी तुलना करने के लिए >, < या = का उपयोग करें। सही चुनें और तुम्हें ऊपर चढ़ने देने के लिए कगार उठेगी!",
+    narrator: "एक विशाल पर्वत श्रृंखला ज्वालामुखी के रास्ते को अवरुद्ध करती है। ऊपर जाने का एकमात्र तरीका प्रत्येक कगार में उकेरी गई भाग तुलना चुनौतियों की एक श्रृंखला के माध्यम से है…",
     color: '#6B7280',
     bgGradient: 'linear-gradient(145deg, #F9FAFB, #F3F4F6)',
     borderColor: '#6B7280',
@@ -104,10 +104,10 @@ const storySteps = [
   {
     step: 8,
     emoji: '🔐',
-    world: "Blackbeard's Secret Chamber",
-    title: "The Emoji Code Puzzle",
-    blackbeardSays: "HA! Me most cunning defense — I encoded fractions using EMOJIS! Ye'll need to crack me secret code to pass through the chamber door. Use the key I left behind!",
-    narrator: "You discover a hidden chamber sealed with an emoji-coded lock. A faded note on the wall reveals Blackbeard's secret code key…",
+    world: "ब्लैकबियर्ड का गुप्त कक्ष",
+    title: "इमोजी कोड पहेली",
+    blackbeardSays: "हा! मेरी सबसे चालाक रक्षा — मैंने EMOJIS का उपयोग करके भागों को एन्कोड किया! कक्ष के दरवाजे से गुजरने के लिए तुम्हें मेरे गुप्त कोड को क्रैक करना होगा। मेरे द्वारा छोड़ी गई कुंजी का उपयोग करें!",
+    narrator: "आप एक इमोजी-कोडित ताले के साथ सील किए गए एक छिपे हुए कक्ष की खोज करते हैं। दीवार पर एक फीका नोट ब्लैकबियर्ड की गुप्त कोड कुंजी को प्रकट करता है…",
     color: '#4F46E5',
     bgGradient: 'linear-gradient(145deg, #EEF2FF, #E0E7FF)',
     borderColor: '#4F46E5',
@@ -115,10 +115,10 @@ const storySteps = [
   {
     step: 9,
     emoji: '🌍',
-    world: 'The Island Village',
-    title: 'The Real-Life Quest',
-    blackbeardSays: "The villagers here can point ye to the volcano — but only if ye can help them solve their everyday fraction problems! Show them yer math skills and they'll give ye directions!",
-    narrator: "You arrive at a friendly island village. The villagers have fraction problems in their daily lives — they need your help before they'll share the path to the volcano!",
+    world: 'द्वीप गांव',
+    title: 'वास्तविक जीवन की खोज',
+    blackbeardSays: "यहाँ के ग्रामीण आपको ज्वालामुखी दिखा सकते हैं — लेकिन तभी जब आप उनके दैनिक भाग (fraction) समस्याओं को हल करने में उनकी मदद कर सकें! उन्हें अपना गणित कौशल दिखाएं और वे आपको दिशा-निर्देश देंगे!",
+    narrator: "आप एक अनुकूल द्वीप गांव में पहुंचते हैं। ग्रामीणों के दैनिक जीवन में भाग की समस्याएं हैं — ज्वालामुखी का मार्ग साझा करने से पहले उन्हें आपकी सहायता की आवश्यकता है!",
     color: '#0369A1',
     bgGradient: 'linear-gradient(145deg, #F0F9FF, #E0F2FE)',
     borderColor: OCEAN,
@@ -126,10 +126,10 @@ const storySteps = [
   {
     step: 10,
     emoji: '🎡',
-    world: 'The Pirate Carnival',
-    title: 'The Spin Challenge',
-    blackbeardSays: "Almost at the volcano! But first — me old carnival! Spin the fraction wheel, answer the question, and earn yer lucky token to enter the volcano path!",
-    narrator: "A cheerful carnival appears, seemingly out of nowhere. A giant fraction wheel spins in the center. Blackbeard's ghost grins mischievously as he gestures toward it…",
+    world: 'समुद्री डाकू कार्निवल',
+    title: 'स्पिन चैलेंज',
+    blackbeardSays: "ज्वालामुखी के लगभग पास! लेकिन पहले — मेरा पुराना कार्निवल! भाग का पहिया घुमाएं, प्रश्न का उत्तर दें, और ज्वालामुखी के रास्ते में प्रवेश करने के लिए अपना भाग्यशाली टोकन अर्जित करें!",
+    narrator: "एक हंसमुख कार्निवल प्रकट होता है, जो कहीं से भी नहीं आता है। केंद्र में एक विशाल भाग का पहिया घूमता है। ब्लैकबियर्ड का भूत शरारत से मुस्कुराता है जब वह उसकी ओर इशारा करता है…",
     color: '#B91C1C',
     bgGradient: 'linear-gradient(145deg, #FFF1F2, #FFE4E6)',
     borderColor: '#B91C1C',
@@ -137,10 +137,10 @@ const storySteps = [
   {
     step: 11,
     emoji: '🦇',
-    world: 'The Dark Cave',
-    title: 'The Escape Cave',
-    blackbeardSays: "The entrance to me treasure vault is through this dark cave! Solve each challenge to light a torch and find yer way through — get stuck in the dark and ye'll never reach the treasure!",
-    narrator: "A pitch-black cave stretches before you. The only light comes from magical torches that activate when fraction challenges are solved correctly…",
+    world: 'अंधेरी गुफा',
+    title: 'भागने की गुफा',
+    blackbeardSays: "मेरी खजाने की तिजोरी का प्रवेश द्वार इस अंधेरी गुफा से होकर जाता है! एक मशाल जलाने के लिए प्रत्येक चुनौती को हल करें और अपना रास्ता खोजें — अंधेरे में फंसें और आप खजाने तक कभी नहीं पहुंचेंगे!",
+    narrator: "आपके सामने एक अंधेरी गुफा फैली हुई है। एकमात्र प्रकाश जादुई मशालों से आता है जो तब सक्रिय होते हैं जब भाग की चुनौतियाँ सही ढंग से हल हो जाती हैं…",
     color: '#374151',
     bgGradient: 'linear-gradient(145deg, #F9FAFB, #F3F4F6)',
     borderColor: '#374151',
@@ -148,10 +148,10 @@ const storySteps = [
   {
     step: 12,
     emoji: '👾',
-    world: 'The Volcano Summit',
-    title: 'The Final Boss Battle',
-    blackbeardSays: "YE MADE IT! But before the treasure is yours — ye must face me greatest creation: the FRACTION BOSS! Answer all 10 questions correctly to deal enough damage and claim yer prize!",
-    narrator: "You climb to the volcano summit. The ground shakes. Rising from the lava is the Fraction Boss — Blackbeard's ultimate guardian of the treasure!",
+    world: 'ज्वालामुखी शिखर',
+    title: 'अंतिम बॉस बैटल',
+    blackbeardSays: "तुमने कर दिखाया! लेकिन खजाना तुम्हारा होने से पहले — तुम्हें मेरी सबसे बड़ी रचना का सामना करना होगा: भाग (FRACTION) बॉस! पर्याप्त नुकसान पहुंचाने और अपने पुरस्कार का दावा करने के लिए सभी 10 सवालों के सही जवाब दें!",
+    narrator: "आप ज्वालामुखी शिखर पर चढ़ते हैं। जमीन हिलती है। लावा से ऊपर उठ रहा है भाग (Fraction) बॉस — खजाने का ब्लैकबियर्ड का परम रक्षक!",
     color: '#991B1B',
     bgGradient: 'linear-gradient(145deg, #FFF1F2, #FFE4E6)',
     borderColor: '#991B1B',
@@ -159,10 +159,10 @@ const storySteps = [
   {
     step: 13,
     emoji: '🏆',
-    world: 'The Treasure Vault',
-    title: 'Victory! The Treasure is Yours!',
-    blackbeardSays: "ASTOUNDING! Ye've conquered every challenge, defeated every monster, and solved every fraction puzzle! The legendary Fraction Treasure of Blackbeard's Island is YOURS, explorer! Well earned!",
-    narrator: "The volcano opens to reveal a gleaming treasure vault. Mountains of gold coins, gems, and scrolls fill the room — and your Certificate of Achievement awaits!",
+    world: 'खजाना तिजोरी',
+    title: 'विजय! खजाना तुम्हारा है!',
+    blackbeardSays: "अद्भुत! तुमने हर चुनौती पर विजय प्राप्त की है, हर राक्षस को हराया है, और हर भाग की पहेली को सुलझाया है! ब्लैकबियर्ड के द्वीप का खजाना तुम्हारा है, खोजकर्ता! बहुत बढ़िया!",
+    narrator: "ज्वालामुखी एक चमकते हुए खजाने की तिजोरी को प्रकट करने के लिए खुलता है। सोने के सिक्कों, रत्नों और स्क्रॉल के पहाड़ कमरे को भर देते हैं — और आपका उपलब्धि का प्रमाण पत्र प्रतीक्षा कर रहा है!",
     color: '#B45309',
     bgGradient: 'linear-gradient(145deg, #FEF9C3, #FEF3C7)',
     borderColor: GOLD,
@@ -331,10 +331,10 @@ function WorksheetHome() {
   // ── Section 2 — Treasure Hunt matching ───────────────────────
   const matchLeft  = ['1/3', '4/5', '5/8', '1/4'];
   const matchRight = [
-    { id: 'A', text: '4 out of 5 gems are red 💎' },
-    { id: 'B', text: '1 out of 4 coins is gold 🪙' },
-    { id: 'C', text: '1 out of 3 swords is silver ⚔️' },
-    { id: 'D', text: '5 out of 8 pearls are black 🖤' },
+    { id: 'A', text: '5 में से 4 रत्न लाल हैं 💎' },
+    { id: 'B', text: '4 में से 1 सिक्का सोना है 🪙' },
+    { id: 'C', text: '3 में से 1 तलवार चांदी की है ⚔️' },
+    { id: 'D', text: '8 में से 5 मोती काले हैं 🖤' },
   ];
   const correctMatch = { '1/3': 'C', '4/5': 'A', '5/8': 'D', '1/4': 'B' };
   const [matchAnswers, setMatchAnswers] = useState({ '1/3': '', '4/5': '', '5/8': '', '1/4': '' });
@@ -360,12 +360,12 @@ function WorksheetHome() {
 
   // ── Section 4 — Monster Maze MCQ ─────────────────────────────
   const mazeQ = [
-    { q: "Blackbeard split a gold coin into 2. He kept 1 piece. What fraction did he keep?", opts: ['1/4', '1/2', '3/4', '1/3'], ans: 1 },
-    { q: 'A ship has 8 cannons. 3 are fired. What fraction of cannons were fired?', opts: ['3/5', '5/8', '3/8', '1/3'], ans: 2 },
-    { q: 'The map is ½ done. The compass shows ¼. Which is further along?', opts: ['1/4', '1/2', 'Equal', 'Cannot tell'], ans: 1 },
-    { q: 'Blackbeard found ²⁄₄ of the treasure. What is that simplified?', opts: ['2/4', '1/2', '1/4', '3/4'], ans: 1 },
-    { q: 'There are 5 treasure chests. 2 have gold. What fraction has gold?', opts: ['3/5', '2/3', '2/5', '5/2'], ans: 2 },
-    { q: 'Which of these equals ⅓ (an equivalent fraction)?', opts: ['2/9', '2/6', '3/9', '4/12'], ans: 1 },
+    { q: "ब्लैकबियर्ड ने एक सोने के सिक्के को 2 में बांट दिया। उसने 1 टुकड़ा रखा। उसने कितना भाग (fraction) रखा?", opts: ['1/4', '1/2', '3/4', '1/3'], ans: 1 },
+    { q: 'एक जहाज में 8 तोपें हैं। 3 दागी जाती हैं। तोपों का कितना भाग दागा गया?', opts: ['3/5', '5/8', '3/8', '1/3'], ans: 2 },
+    { q: 'नक्शा ½ बन चुका है। कंपास ¼ दिखाता है। कौन अधिक आगे है?', opts: ['1/4', '1/2', 'बराबर', 'कह नहीं सकते'], ans: 1 },
+    { q: 'ब्लैकबियर्ड को खजाने का ²⁄₄ मिला। इसका सरल रूप क्या है?', opts: ['2/4', '1/2', '1/4', '3/4'], ans: 1 },
+    { q: 'यहाँ 5 खजाने के संदूक हैं। 2 में सोना है। कितने भाग में सोना है?', opts: ['3/5', '2/3', '2/5', '5/2'], ans: 2 },
+    { q: 'इनमें से कौन ⅓ (एक समान भाग) के बराबर है?', opts: ['2/9', '2/6', '3/9', '4/12'], ans: 1 },
   ];
   const [s4Answers, setS4Answers] = useState(Array(mazeQ.length).fill(null));
   const [s4Checked, setS4Checked] = useState(false);
@@ -378,9 +378,9 @@ function WorksheetHome() {
   const [pizzaAns, setPizzaAns] = useState(['', '', '']);
   const [s5Checked, setS5Checked] = useState(false);
   const pizzaGoals = [
-    { parts: 8, goal: 3, label: 'Color 3/8 of the pizza 🍕' },
-    { parts: 6, goal: 4, label: 'Color 4/6 of the pizza 🍕' },
-    { parts: 4, goal: 1, label: 'Color 1/4 of the pizza 🍕' },
+    { parts: 8, goal: 3, label: 'पिज़्ज़ा का 3/8 भाग रंगें 🍕' },
+    { parts: 6, goal: 4, label: 'पिज़्ज़ा का 4/6 भाग रंगें 🍕' },
+    { parts: 4, goal: 1, label: 'पिज़्ज़ा का 1/4 भाग रंगें 🍕' },
   ];
   const pizzaStates  = [pizza1, pizza2, pizza3];
   const pizzaSetters = [setPizza1, setPizza2, setPizza3];
@@ -445,11 +445,11 @@ function WorksheetHome() {
 
   // ── Section 9 — Real-Life Quest ───────────────────────────────
   const rlQ = [
-    { q: "Blackbeard has 12 gold coins. 4 are cursed. What fraction is cursed?", ans: '1/3', hint: '4/12 = ?' },
-    { q: "A rope is cut into 5 equal parts. 2 parts hold the anchor. What fraction is LEFT?", ans: '3/5', hint: 'Left = total − used' },
-    { q: "30 pirates on deck. 10 are sleeping. What fraction is sleeping?", ans: '1/3', hint: '10/30 = ?' },
-    { q: "A water barrel holds 8 cups. 6 cups are fresh water. What fraction is fresh?", ans: '3/4', hint: '6/8 = ?' },
-    { q: "9 treasure gems found. 6 are diamonds. What fraction is NOT a diamond?", ans: '1/3', hint: 'Not diamond = 9 − 6 = 3' },
+    { q: "ब्लैकबियर्ड के पास 12 सोने के सिक्के हैं। 4 शापित हैं। कितना भाग शापित है?", ans: '1/3', hint: '4/12 = ?' },
+    { q: "एक रस्सी को 5 समान भागों में काटा गया है। 2 भाग लंगर को पकड़ते हैं। कितना भाग बचा (LEFT) है?", ans: '3/5', hint: 'बचा हुआ = कुल − उपयोग किया गया' },
+    { q: "डेक पर 30 समुद्री डाकू। 10 सो रहे हैं। कितना भाग सो रहा है?", ans: '1/3', hint: '10/30 = ?' },
+    { q: "एक पानी के बैरल में 8 कप आते हैं। 6 कप ताजा पानी है। कितना भाग ताजा है?", ans: '3/4', hint: '6/8 = ?' },
+    { q: "9 खजाने के रत्न मिले। 6 हीरे हैं। कौन सा भाग हीरा नहीं है?", ans: '1/3', hint: 'हीरा नहीं = 9 − 6 = 3' },
   ];
   const [s9Inputs, setS9Inputs] = useState(Array(rlQ.length).fill(''));
   const [s9Checked, setS9Checked] = useState(false);
@@ -487,14 +487,14 @@ function WorksheetHome() {
       const landed = spinSlices[(spinSlices.length - 1 - idx + spinSlices.length) % spinSlices.length];
       setSpinResult(landed);
       const spinQs = {
-        '1/2': { q: "Blackbeard cut a cake in half. Which fraction is equivalent to 1/2?", ans: '2/4', opts: ['2/4','1/3','3/8'] },
-        '1/4': { q: "Is 1/4 bigger or smaller than 1/2?", ans: 'smaller', opts: ['bigger','smaller','equal'] },
-        '3/4': { q: "How many quarter-coins make 3/4 of a coin?", ans: '3', opts: ['2','3','4'] },
-        '1/3': { q: "What fraction is equivalent to 1/3?", ans: '2/6', opts: ['2/6','3/8','2/5'] },
+        '1/2': { q: "ब्लैकबियर्ड ने एक केक को आधा काट दिया। कौन सा भाग 1/2 के बराबर है?", ans: '2/4', opts: ['2/4','1/3','3/8'] },
+        '1/4': { q: "क्या 1/4, 1/2 से बड़ा है या छोटा?", ans: 'छोटा', opts: ['bigger','छोटा','equal'] },
+        '3/4': { q: "कितने चौथाई-सिक्के मिलकर एक सिक्के का 3/4 बनाते हैं?", ans: '3', opts: ['2','3','4'] },
+        '1/3': { q: "कौन सा भाग 1/3 के बराबर है?", ans: '2/6', opts: ['2/6','3/8','2/5'] },
         '2/3': { q: "2/3 + 1/3 = ?", ans: '1', opts: ['3/6','1','2/3'] },
-        '3/8': { q: "Is 3/8 more or less than 1/2?", ans: 'less', opts: ['more','less','equal'] },
-        '5/8': { q: "Is 5/8 more or less than 1/2?", ans: 'more', opts: ['more','less','equal'] },
-        '1/8': { q: "How many eighths make 1 whole treasure?", ans: '8', opts: ['4','6','8'] },
+        '3/8': { q: "क्या 3/8, 1/2 से अधिक (more) है या कम (less)?", ans: 'कम', opts: ['अधिक','कम','equal'] },
+        '5/8': { q: "क्या 5/8, 1/2 से अधिक (more) है या कम (less)?", ans: 'अधिक', opts: ['अधिक','कम','equal'] },
+        '1/8': { q: "एक पूरा खजाना बनाने के लिए कितने आठवें भाग लगते हैं?", ans: '8', opts: ['4','6','8'] },
       };
       setSpinQ(spinQs[landed] || null);
     }, 3100);
@@ -513,11 +513,11 @@ function WorksheetHome() {
 
   // ── Section 11 — Escape Cave ──────────────────────────────────
   const escapeSteps = [
-    { q: "Order from smallest to largest: 1/2, 1/4, 3/4", ans: '1/4, 1/2, 3/4', type: 'text' },
-    { q: "What fraction of the number line between 0 and 1 is halfway?", ans: '1/2', type: 'text' },
-    { q: "Write an equivalent fraction for 2/3", ans: '4/6', type: 'text', altAns: ['6/9','8/12','10/15'] },
-    { q: "Which is larger: 5/6 or 7/8? Write the bigger one.", ans: '7/8', type: 'text' },
-    { q: "Blackbeard ate 3 out of 9 biscuits. What fraction is that? Simplify!", ans: '1/3', type: 'text' },
+    { q: "छोटे से बड़े के क्रम में लगाएं: 1/2, 1/4, 3/4", ans: '1/4, 1/2, 3/4', type: 'text' },
+    { q: "0 और 1 के बीच संख्या रेखा का कौन सा भाग आधा है?", ans: '1/2', type: 'text' },
+    { q: "2/3 के लिए एक समान भाग (fraction) लिखें", ans: '4/6', type: 'text', altAns: ['6/9','8/12','10/15'] },
+    { q: "कौन बड़ा है: 5/6 या 7/8? बड़ा वाला लिखें।", ans: '7/8', type: 'text' },
+    { q: "ब्लैकबियर्ड ने 9 में से 3 बिस्कुट खाए। यह कौन सा भाग है? सरल करें!", ans: '1/3', type: 'text' },
   ];
   const [s11Inputs, setS11Inputs] = useState(Array(escapeSteps.length).fill(''));
   const [s11Checked, setS11Checked] = useState(false);
@@ -530,16 +530,16 @@ function WorksheetHome() {
 
   // ── Section 12 — Boss Battle ──────────────────────────────────
   const bossQ = [
-    { q: 'Which is the GREATEST fraction?', opts: ['1/2','3/4','1/3','2/5'], ans: 1 },
-    { q: '6/8 simplified is...', opts: ['3/4','2/3','1/2','4/6'], ans: 0 },
-    { q: 'Which fraction equals 50%?', opts: ['1/4','3/4','1/2','2/3'], ans: 2 },
+    { q: 'सबसे बड़ा (GREATEST) भाग कौन सा है?', opts: ['1/2','3/4','1/3','2/5'], ans: 1 },
+    { q: '6/8 का सरल रूप है...', opts: ['3/4','2/3','1/2','4/6'], ans: 0 },
+    { q: 'कौन सा भाग 50% के बराबर है?', opts: ['1/4','3/4','1/2','2/3'], ans: 2 },
     { q: '¼ + ¼ = ?', opts: ['1/4','2/8','1/2','3/4'], ans: 2 },
-    { q: 'What is 1 whole written as fourths?', opts: ['2/4','3/4','4/4','5/4'], ans: 2 },
-    { q: "Blackbeard drank ⅝ of his juice. How much is LEFT?", opts: ['5/8','3/8','2/8','4/8'], ans: 1 },
-    { q: 'Which pair are equivalent fractions?', opts: ['1/2 and 2/5','3/4 and 6/8','1/3 and 1/4','2/3 and 3/4'], ans: 1 },
-    { q: '3 out of 12 gems are blue. What fraction simplified?', opts: ['3/12','1/4','1/3','2/6'], ans: 1 },
-    { q: 'On a number line, which fraction is closest to 1?', opts: ['1/4','1/2','3/4','4/5'], ans: 3 },
-    { q: 'Half of a half is...', opts: ['1/4','1/3','1/2','2/4'], ans: 0 },
+    { q: '1 पूरे को चौथाई के रूप में कैसे लिखा जाएगा?', opts: ['2/4','3/4','4/4','5/4'], ans: 2 },
+    { q: "ब्लैकबियर्ड ने अपने जूस का ⅝ पी लिया। कितना बचा (LEFT) है?", opts: ['5/8','3/8','2/8','4/8'], ans: 1 },
+    { q: 'कौन सा जोड़ा समान भाग है?', opts: ['1/2 और 2/5','3/4 और 6/8','1/3 और 1/4','2/3 और 3/4'], ans: 1 },
+    { q: '12 रत्नों में से 3 नीले हैं। सरल रूप में कौन सा भाग है?', opts: ['3/12','1/4','1/3','2/6'], ans: 1 },
+    { q: 'संख्या रेखा पर कौन सा भाग 1 के सबसे करीब है?', opts: ['1/4','1/2','3/4','4/5'], ans: 3 },
+    { q: 'आधे का आधा होता है...', opts: ['1/4','1/3','1/2','2/4'], ans: 0 },
   ];
   const [s12Answers, setS12Answers] = useState(Array(bossQ.length).fill(null));
   const [s12Checked, setS12Checked] = useState(false);
@@ -557,11 +557,11 @@ function WorksheetHome() {
 
   // ── Answer key ────────────────────────────────────────────────
   const allAnswers = {
-    'Section 1': ['Color 1 of 2 parts', 'Color 3 of 4 parts', '2/4 (or 1/2)', '1/3'],
+    'Section 1': ['2 में से 1 भाग को रंगें', '4 में से 3 भाग को रंगें', '2/4 (or 1/2)', '1/3'],
     'Section 2': ['1/3 → C', '4/5 → A', '5/8 → D', '1/4 → B'],
-    'Section 3': numDenQ.map(q => `${q.frac}: numerator=${q.numAns}, denominator=${q.denAns}`),
+    'Section 3': numDenQ.map(q => `${q.frac}: अंश=${q.numAns}, हर=${q.denAns}`),
     'Section 4': mazeQ.map((q, i) => `Q${i+1}: ${q.opts[q.ans]}`),
-    'Section 5': ['Color 3 slices of 8', 'Color 4 slices of 6', 'Color 1 slice of 4'],
+    'Section 5': ['8 में से 3 स्लाइस को रंगें', '6 में से 4 स्लाइस को रंगें', '4 में से 1 स्लाइस को रंगें'],
     'Section 6': equivQ.map(q => `${q.given.replace('__', q.ans)}`),
     'Section 7': compQ.map(q => `${q.f1} ${q.ans} ${q.f2}`),
     'Section 8': codeQ.map(q => `${q.puzzle} = ${q.ans}`),
@@ -810,7 +810,7 @@ function WorksheetHome() {
                   🗺️ Challenge 1: The Torn Map
                 </h2>
                 <div style={{ fontSize: '0.85rem', fontWeight: 700, border: `2px solid ${GREEN}`, padding: '0.3rem 0.7rem', borderRadius: 6, background: '#F0F9FF' }}>
-                  Score: {s1Score}/4
+                  स्कोर: {s1Score}/4
                 </div>
               </div>
               <p style={{ marginBottom: '1.5rem', lineHeight: 1.6 }}>
@@ -900,7 +900,7 @@ function WorksheetHome() {
                   💎 Challenge 2: The Treasure Hunt
                 </h2>
                 <div style={{ fontSize: '0.85rem', fontWeight: 700, border: `2px solid ${GREEN}`, padding: '0.3rem 0.7rem', borderRadius: 6, background: '#F0F9FF' }}>
-                  Score: {s2Score}/4
+                  स्कोर: {s2Score}/4
                 </div>
               </div>
               <p style={{ marginBottom: '1.5rem', lineHeight: 1.6 }}>
@@ -958,7 +958,7 @@ function WorksheetHome() {
                   ⚔️ Challenge 3: Numerator vs. Denominator
                 </h2>
                 <div style={{ fontSize: '0.85rem', fontWeight: 700, border: `2px solid ${GREEN}`, padding: '0.3rem 0.7rem', borderRadius: 6, background: '#F0F9FF' }}>
-                  Score: {s3Score}/10
+                  स्कोर: {s3Score}/10
                 </div>
               </div>
               <p style={{ marginBottom: '1rem', lineHeight: 1.6 }}>
@@ -1001,7 +1001,7 @@ function WorksheetHome() {
               </div>
 
               <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem' }}>
-                <button className="btn btn-primary" onClick={() => setS3Checked(true)}>✅ Check Answers</button>
+                <button className="btn btn-primary" onClick={() => setS3Checked(true)}>✅ उत्तर जांचें</button>
               </div>
             </div>
           </div>
@@ -1019,7 +1019,7 @@ function WorksheetHome() {
                   🧟 Challenge 4: The Fraction Monster Maze
                 </h2>
                 <div style={{ fontSize: '0.85rem', fontWeight: 700, border: `2px solid ${GREEN}`, padding: '0.3rem 0.7rem', borderRadius: 6, background: '#F0F9FF' }}>
-                  Score: {s4Score}/6
+                  स्कोर: {s4Score}/6
                 </div>
               </div>
 
@@ -1089,7 +1089,7 @@ function WorksheetHome() {
                   🍕 Challenge 5: The Pizza King's Challenge
                 </h2>
                 <div style={{ fontSize: '0.85rem', fontWeight: 700, border: `2px solid ${GREEN}`, padding: '0.3rem 0.7rem', borderRadius: 6, background: '#F0F9FF' }}>
-                  Score: {s5Score}/6
+                  स्कोर: {s5Score}/6
                 </div>
               </div>
               <p style={{ marginBottom: '1.5rem', lineHeight: 1.6 }}>
@@ -1137,7 +1137,7 @@ function WorksheetHome() {
                   🌉 Challenge 6: The Equivalent Bridge
                 </h2>
                 <div style={{ fontSize: '0.85rem', fontWeight: 700, border: `2px solid ${GREEN}`, padding: '0.3rem 0.7rem', borderRadius: 6, background: '#F0F9FF' }}>
-                  Score: {s6Score}/8
+                  स्कोर: {s6Score}/8
                 </div>
               </div>
 
@@ -1195,7 +1195,7 @@ function WorksheetHome() {
                   ⛰️ Challenge 7: The Comparison Mountain
                 </h2>
                 <div style={{ fontSize: '0.85rem', fontWeight: 700, border: `2px solid ${GREEN}`, padding: '0.3rem 0.7rem', borderRadius: 6, background: '#F0F9FF' }}>
-                  Score: {s7Score}/8
+                  स्कोर: {s7Score}/8
                 </div>
               </div>
 
@@ -1249,7 +1249,7 @@ function WorksheetHome() {
                   🔐 Challenge 8: Blackbeard's Emoji Code
                 </h2>
                 <div style={{ fontSize: '0.85rem', fontWeight: 700, border: `2px solid ${GREEN}`, padding: '0.3rem 0.7rem', borderRadius: 6, background: '#F0F9FF' }}>
-                  Score: {s8Score}/6
+                  स्कोर: {s8Score}/6
                 </div>
               </div>
 
@@ -1298,7 +1298,7 @@ function WorksheetHome() {
                   🌍 Challenge 9: The Real-Life Quest
                 </h2>
                 <div style={{ fontSize: '0.85rem', fontWeight: 700, border: `2px solid ${GREEN}`, padding: '0.3rem 0.7rem', borderRadius: 6, background: '#F0F9FF' }}>
-                  Score: {s9Score}/5
+                  स्कोर: {s9Score}/5
                 </div>
               </div>
               <p style={{ marginBottom: '1.5rem', lineHeight: 1.6 }}>
@@ -1344,7 +1344,7 @@ function WorksheetHome() {
                   🎡 Challenge 10: The Fraction Spin!
                 </h2>
                 <div style={{ fontSize: '0.85rem', fontWeight: 700, border: `2px solid ${GREEN}`, padding: '0.3rem 0.7rem', borderRadius: 6, background: '#F0F9FF' }}>
-                  Score: {spinScore}/{Math.max(spinAttempts, 1)}
+                  स्कोर: {spinScore}/{Math.max(spinAttempts, 1)}
                 </div>
               </div>
 
@@ -1383,7 +1383,7 @@ function WorksheetHome() {
                     {spinning ? '⏳ Spinning…' : '🎯 Spin!'}
                   </button>
                   <div style={{ fontFamily: 'var(--font-fun)', fontWeight: 700, fontSize: '0.9rem', color: '#6B7280' }}>
-                    Spins: {spinAttempts} | Score: {spinScore}
+                    Spins: {spinAttempts} | स्कोर: {spinScore}
                   </div>
                 </div>
 
@@ -1446,7 +1446,7 @@ function WorksheetHome() {
                   🦇 Challenge 11: The Escape Cave
                 </h2>
                 <div style={{ fontSize: '0.85rem', fontWeight: 700, border: `2px solid ${GREEN}`, padding: '0.3rem 0.7rem', borderRadius: 6, background: '#F0F9FF' }}>
-                  Score: {s11Score}/5
+                  स्कोर: {s11Score}/5
                 </div>
               </div>
 
@@ -1508,7 +1508,7 @@ function WorksheetHome() {
                   👾 Challenge 12: The Final Boss Battle!
                 </h2>
                 <div style={{ fontSize: '0.85rem', fontWeight: 700, border: `2px solid ${GREEN}`, padding: '0.3rem 0.7rem', borderRadius: 6, background: '#F0F9FF' }}>
-                  Score: {s12Score}/10
+                  स्कोर: {s12Score}/10
                 </div>
               </div>
 
@@ -1594,7 +1594,7 @@ function WorksheetHome() {
 
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '1.5rem' }}>
                 <div style={{ background: 'linear-gradient(145deg, #FFF3C4, #FFE066)', border: '3px solid #D4A017', borderRadius: 16, padding: '0.75rem 2rem', fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: '#6B4F1D' }}>
-                  🏆 Score: {totalScore}/{totalMax}
+                  🏆 स्कोर: {totalScore}/{totalMax}
                 </div>
                 <div style={{ background: 'linear-gradient(145deg, #D1FAE5, #A7F3D0)', border: '3px solid #047857', borderRadius: 16, padding: '0.75rem 2rem', fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: '#065F46' }}>
                   {totalScore >= totalMax * 0.9 ? '⭐⭐⭐ MASTER!' : totalScore >= totalMax * 0.7 ? '⭐⭐ EXPLORER!' : '⭐ ADVENTURER!'}

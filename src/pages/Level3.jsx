@@ -45,7 +45,7 @@ const storyBeats = [
 ];
 
 /* ─── Victory / end-of-story modal ─── */
-function VictoryModal({ onContinue }) {
+function VictoryModal({ onContinue, t }) {
   return (
     <div style={{
       position: 'fixed', inset: 0,
@@ -111,7 +111,7 @@ function VictoryModal({ onContinue }) {
           textAlign: 'center',
           marginBottom: 0,
         }}>
-          MAGMUS DEFEATED!
+          {t("MAGMUS DEFEATED!")}
         </h2>
 
         <div style={{
@@ -128,17 +128,16 @@ function VictoryModal({ onContinue }) {
             fontSize: '1.05rem', color: 'rgba(255,255,255,0.9)',
             lineHeight: 1.7, fontStyle: 'italic',
           }}>
-            "HA-HAAR! Incredible, young explorer! You've defeated my guardian and solved every fraction mystery on the island!
-            The treasure is YOURS — and with it, the title of Fraction Master of the Seven Seas! Blackbeard is proud of ye!"
+            {t("\"HA-HAAR! Incredible, young explorer! You've defeated my guardian and solved every fraction mystery on the island! The treasure is YOURS — and with it, the title of Fraction Master of the Seven Seas! Blackbeard is proud of ye!\"")}
           </p>
           <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.9rem', color: '#E9C46A', marginTop: '0.5rem' }}>
-            — Captain Blackbeard's Ghost
+            — {t("Captain Blackbeard's Ghost")}
           </div>
         </div>
 
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
           <div className="badge-coin" style={{ fontSize: '1.2rem', padding: '0.6rem 1.5rem' }}>
-            🪙 +{CONFIG.coinsPerAnswer * CONFIG.questionsPerSession} Total Coins
+            🪙 +{CONFIG.coinsPerAnswer * CONFIG.questionsPerSession} {t("Total Coins")}
           </div>
           <div className="badge-xp" style={{ fontSize: '1.2rem', padding: '0.6rem 1.5rem' }}>
             ⭐ +{CONFIG.xpPerAnswer * CONFIG.questionsPerSession} XP
@@ -149,7 +148,7 @@ function VictoryModal({ onContinue }) {
           fontFamily: 'var(--font-fun)', color: 'rgba(255,255,255,0.5)',
           fontSize: '0.85rem', textAlign: 'center',
         }}>
-          Returning to the island map in a moment…
+          {t("Returning to the island map in a moment…")}
         </p>
       </div>
     </div>
@@ -157,7 +156,7 @@ function VictoryModal({ onContinue }) {
 }
 
 function Level3() {
-  const { addCoins, addXp } = useGame();
+  const { addCoins, addXp, t } = useGame();
   const navigate = useNavigate();
   const [currentStage, setCurrentStage] = useState(0);
   const [feedback, setFeedback] = useState(null);
@@ -272,7 +271,7 @@ function Level3() {
               letterSpacing: '0.05em', textTransform: 'uppercase',
               marginBottom: '1rem',
             }}>
-              📖 Chapter 3 of 3 — Final Battle
+              {t("Chapter 3 of 3 — Final Battle")}
             </div>
 
             <h2 style={{
@@ -281,7 +280,7 @@ function Level3() {
               color: 'var(--primary-dark)',
               marginBottom: '0.25rem',
             }}>
-              🌋 Volcano Battle
+              {t("🌋 Volcano Battle")}
             </h2>
             <h3 style={{
               fontFamily: 'var(--font-fun)',
@@ -290,7 +289,7 @@ function Level3() {
               fontWeight: 700,
               marginBottom: '1.25rem',
             }}>
-              Defeat MAGMUS — The Fraction Monster!
+              {t("Defeat MAGMUS — The Fraction Monster!")}
             </h3>
 
             <div style={{
@@ -305,32 +304,29 @@ function Level3() {
                 <span style={{ fontSize: '2.5rem', flexShrink: 0 }}>🏴‍☠️</span>
                 <div>
                   <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.85rem', color: '#DC2626', marginBottom: '0.3rem' }}>
-                    Captain Blackbeard's Ghost
+                    {t("Captain Blackbeard's Ghost")}
                   </div>
                   <p style={{
                     fontFamily: 'var(--font-fun)', fontSize: '0.95rem',
                     color: 'var(--text-parchment)', lineHeight: 1.6,
                     fontStyle: 'italic',
                   }}>
-                    "You've made it to me volcano hideout! But to reach the treasure, ye must defeat MAGMUS —
-                    the Fraction Monster I summoned using dark math magic!
-                    Compare the two fractions with &gt;, &lt; or = to deal damage. Get it right and the monster weakens!
-                    Get it wrong and Magmus dodges. Now FIGHT!"
+                    {t("\"You've made it to me volcano hideout! But to reach the treasure, ye must defeat MAGMUS — the Fraction Monster I summoned using dark math magic! Compare the two fractions with >, < or = to deal damage. Get it right and the monster weakens! Get it wrong and Magmus dodges. Now FIGHT!\"")}
                   </p>
                 </div>
               </div>
             </div>
 
             <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
-              <div className="badge-coin" style={{ fontSize: '0.9rem' }}>🪙 {CONFIG.coinsPerAnswer} coins per hit</div>
-              <div className="badge-xp" style={{ fontSize: '0.9rem' }}>⭐ {CONFIG.xpPerAnswer} XP per hit</div>
+              <div className="badge-coin" style={{ fontSize: '0.9rem' }}>🪙 {CONFIG.coinsPerAnswer} {t("coins per hit")}</div>
+              <div className="badge-xp" style={{ fontSize: '0.9rem' }}>⭐ {CONFIG.xpPerAnswer} {t("XP per hit")}</div>
               <div style={{
                 background: 'rgba(239,68,68,0.12)', border: '2px solid #EF4444',
                 borderRadius: 'var(--radius-full)', padding: '0.3rem 0.8rem',
                 fontFamily: 'var(--font-fun)', fontWeight: 700, fontSize: '0.9rem',
                 color: '#991B1B',
               }}>
-                ⚔️ {CONFIG.questionsPerSession} battle rounds
+                ⚔️ {CONFIG.questionsPerSession} {t("battle rounds")}
               </div>
             </div>
 
@@ -343,7 +339,7 @@ function Level3() {
                 border: '3px solid #991B1B',
               }}
             >
-              ⚔️ Face MAGMUS!
+              {t("⚔️ Face MAGMUS!")}
             </button>
           </div>
         </div>
@@ -358,7 +354,7 @@ function Level3() {
       position: 'relative', overflow: 'hidden',
     }}>
       {/* Victory modal */}
-      {showVictory && <VictoryModal onContinue={() => navigate('/simulation')} />}
+      {showVictory && <VictoryModal onContinue={() => navigate('/simulation')} t={t} />}
 
       {/* Volcano background */}
       <div style={{
@@ -407,7 +403,7 @@ function Level3() {
         borderBottom: '4px solid #3B0000',
       }}>
         <Link to="/simulation" className="btn btn-secondary" style={{ fontSize: '0.8rem', padding: '0.4rem 0.8rem' }}>
-          🏃 Retreat!
+          {t("🏃 Retreat!")}
         </Link>
         <div style={{
           fontFamily: 'var(--font-heading)', fontSize: '1.1rem',
@@ -415,10 +411,10 @@ function Level3() {
           display: 'flex', alignItems: 'center', gap: '0.5rem',
           color: '#FCD34D',
         }}>
-          🌋 Volcano Battle — vs MAGMUS
+          {t("🌋 Volcano Battle — vs MAGMUS")}
         </div>
         <div style={{ fontFamily: 'var(--font-fun)', fontWeight: 700, fontSize: '0.9rem', color: '#FCA5A5' }}>
-          ⚔️ Round {currentStage + 1} / {stages.length}
+          {t("⚔️ Round")} {currentStage + 1} / {stages.length}
         </div>
       </header>
 
@@ -454,20 +450,20 @@ function Level3() {
               color: '#FCA5A5', marginBottom: '0.4rem',
               letterSpacing: '0.05em', textTransform: 'uppercase',
             }}>
-              {beat.characterName} says:
+              {t(beat.characterName)} {t("says:")}
             </div>
             <p style={{
               fontFamily: 'var(--font-fun)', fontSize: '0.95rem',
               color: 'rgba(255,255,255,0.88)', lineHeight: 1.6,
               fontStyle: 'italic', margin: 0,
             }}>
-              "{beat.characterSays}"
+              "{t(beat.characterSays)}"
             </p>
             <div style={{
               marginTop: '0.5rem', fontSize: '0.82rem',
               color: 'rgba(255,255,255,0.4)', fontFamily: 'var(--font-fun)',
             }}>
-              📖 {beat.narrator}
+              📖 {t(beat.narrator)}
             </div>
           </div>
         </div>
@@ -510,7 +506,7 @@ function Level3() {
             fontSize: '1rem', letterSpacing: '0.1em',
             marginBottom: '0.5rem', textShadow: '0 0 10px rgba(239,68,68,0.5)',
           }}>
-            MAGMUS — Fraction Monster
+            {t("MAGMUS — Fraction Monster")}
           </div>
 
           {/* HP Bar */}
@@ -524,7 +520,7 @@ function Level3() {
             color: monsterHp > 50 ? '#FCA5A5' : monsterHp > 0 ? '#F59E0B' : '#9CA3AF',
             fontWeight: 700, fontSize: '0.85rem',
           }}>
-            {monsterHp > 0 ? `HP: ${monsterHp}%` : '💀 DEFEATED!'}
+            {monsterHp > 0 ? `${t("HP:")} ${monsterHp}%` : `💀 ${t("DEFEATED!")}`}
           </div>
         </div>
 
@@ -548,7 +544,7 @@ function Level3() {
             fontFamily: 'var(--font-fun)', fontWeight: 700,
             marginBottom: '0.75rem',
           }}>
-            ⚔️ Battle Round {currentStage + 1}
+            {t("⚔️ Battle Round")} {currentStage + 1}
           </div>
 
           <h3 style={{
@@ -557,7 +553,7 @@ function Level3() {
             color: 'var(--primary-dark)', marginBottom: '1.25rem',
             lineHeight: 1.4,
           }}>
-            Choose the correct symbol to deal damage to MAGMUS!
+            {t("Choose the correct symbol to deal damage to MAGMUS!")}
           </h3>
 
           {/* Fraction comparison */}
@@ -653,13 +649,13 @@ function Level3() {
                   background: 'linear-gradient(90deg, #EF4444, #F59E0B)',
                   WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
                 }}>
-                  CRITICAL HIT!
+                  {t("CRITICAL HIT!")}
                 </div>
                 <div style={{ fontFamily: 'var(--font-fun)', fontSize: '0.9rem', color: '#6B7280', fontStyle: 'italic' }}>
-                  {stage.hint}
+                  {t(stage.hint)}
                 </div>
                 <div className="badge-coin" style={{ fontSize: '1rem' }}>
-                  🪙 +{CONFIG.coinsPerAnswer} Coins!
+                  🪙 +{CONFIG.coinsPerAnswer} {t("Coins!")}
                 </div>
               </div>
             </div>
@@ -680,9 +676,9 @@ function Level3() {
                 boxShadow: 'var(--shadow-lg)',
                 textAlign: 'center',
               }}>
-                💨 Magmus Dodged!
+                {t("💨 Magmus Dodged!")}
                 <div style={{ fontSize: '0.9rem', marginTop: '0.3rem', color: 'rgba(255,255,255,0.7)' }}>
-                  Try a different symbol!
+                  {t("Try a different symbol!")}
                 </div>
               </div>
             </div>
@@ -695,7 +691,7 @@ function Level3() {
           fontFamily: 'var(--font-fun)',
           color: 'rgba(255,255,255,0.45)', fontSize: '0.9rem',
         }}>
-          💡 <em>{stage.hint || 'Tip: Think about which fraction represents a bigger piece of the whole!'}</em>
+          💡 <em>{t(stage.hint || "Tip: Think about which fraction represents a bigger piece of the whole!")}</em>
         </div>
       </main>
     </div>

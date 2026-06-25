@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { GameProvider, useGame } from './context/GameContext';
+
+// Pages
 import SimulationHome from './pages/SimulationHome';
-import WorksheetHome from './pages/WorksheetHome';
 import Level1 from './pages/Level1';
 import Level2 from './pages/Level2';
 import Level3 from './pages/Level3';
-import { GameProvider } from './context/GameContext';
+import StoryAdventure from './pages/StoryAdventure';
+import WorksheetHome from './pages/WorksheetHome';
 import islandBg from './assets/island-hero-bg.png';
 import fractionIslandCover from './assets/fraction-island-cover.jpeg';
 import treasureMap from './assets/treasure-map.png';
@@ -21,6 +24,7 @@ function App() {
           <Route path="/simulation/level1" element={<Level1 />} />
           <Route path="/simulation/level2" element={<Level2 />} />
           <Route path="/simulation/level3" element={<Level3 />} />
+          <Route path="/adventure" element={<StoryAdventure />} />
           <Route path="/worksheet" element={<WorksheetHome />} />
         </Routes>
       </GameProvider>
@@ -89,6 +93,7 @@ function SparkleParticles() {
    Scroll indicator compass
    ============================ */
 function ScrollCompass() {
+  const { t } = useGame();
   return (
     <div
       style={{
@@ -114,7 +119,7 @@ function ScrollCompass() {
         fontWeight: 700,
         textShadow: '0 1px 0 rgba(255,255,255,0.8)',
       }}>
-        Explore More
+        {t("Explore More")}
       </span>
       <span style={{
         fontSize: '1.2rem',
@@ -131,6 +136,7 @@ function ScrollCompass() {
    ============================ */
 function Landing() {
   const [loaded, setLoaded] = useState(false);
+  const { t } = useGame();
 
   useEffect(() => {
     setLoaded(true);
@@ -207,7 +213,7 @@ function Landing() {
               border: '2px solid #B8860B',
             }} />
             <span style={{ fontFamily: 'var(--font-fun)', fontSize: '0.78rem', fontWeight: 700, color: 'var(--primary-dark)' }}>
-              Intellia 360
+              {t("Intellia 360")}
             </span>
           </div>
 
@@ -228,7 +234,7 @@ function Landing() {
               letterSpacing: '0.15em',
               textTransform: 'uppercase',
             }}>
-              ⭐ Math Adventures ⭐
+              ⭐ {t("Math Adventures")} ⭐
             </span>
           </div>
 
@@ -242,13 +248,13 @@ function Landing() {
               textShadow: '2px 2px 0 rgba(45, 106, 79, 0.15)',
             }}
           >
-            The Adventures on<br />
+            {t("The Adventures on")}<br />
             <span style={{
               color: 'var(--secondary)',
               fontSize: '1.2em',
               textShadow: '3px 3px 0 rgba(231, 111, 81, 0.2)',
             }}>
-              Fraction Island!
+              {t("Fraction Island!")}
             </span>
           </h1>
 
@@ -261,8 +267,8 @@ function Landing() {
               lineHeight: 1.6,
             }}
           >
-            Explore • Learn • Have Fun! 🌴<br />
-            Solve clues, collect fraction coins, and find the legendary treasure!
+            {t("Explore • Learn • Have Fun! 🌴")}<br />
+            {t("Solve clues, collect fraction coins, and find the legendary treasure!")}
           </p>
 
           {/* Cover image */}
@@ -283,11 +289,14 @@ function Landing() {
           {/* CTA buttons */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
-              <Link to="/simulation" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1rem 2.5rem' }}>
-                🎮 Play Simulation
+              <Link to="/adventure" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1rem 2.5rem' }}>
+                🗺️ {t("Play Story Adventure")}
+              </Link>
+              <Link to="/simulation" className="btn" style={{ fontSize: '1.2rem', padding: '1rem 2.5rem', background: 'var(--ocean)', color: 'white', border: '3px solid var(--ocean-dark)' }}>
+                🎮 {t("Practice Levels")}
               </Link>
               <Link to="/worksheet" className="btn btn-treasure" style={{ fontSize: '1.2rem', padding: '1rem 2.5rem' }}>
-                🗺️ Printable Worksheet
+                🗺️ {t("Printable Worksheet")}
               </Link>
             </div>
           </div>
@@ -328,7 +337,7 @@ function Landing() {
             color: 'var(--ocean-dark)',
             marginBottom: '3rem',
           }}>
-            🏝️ Your Fraction Island Adventure
+            🏝️ {t("Your Fraction Island Adventure")}
           </h2>
 
           <div style={{
@@ -338,20 +347,20 @@ function Landing() {
           }}>
             <FeatureCard
               emoji="🗺️"
-              title="Explore the Island"
-              desc="Navigate through beaches, bridges, and mountains solving fraction challenges along the way!"
+              title={t("Explore the Island")}
+              desc={t("Navigate through beaches, bridges, and mountains solving fraction challenges along the way!")}
               color="var(--primary)"
             />
             <FeatureCard
               emoji="🪙"
-              title="Collect Fraction Coins"
-              desc="Earn gold coins for every correct answer. Build your treasure collection to become a Fraction Master!"
+              title={t("Collect Fraction Coins")}
+              desc={t("Earn gold coins for every correct answer. Build your treasure collection to become a Fraction Master!")}
               color="var(--accent-dark)"
             />
             <FeatureCard
               emoji="👾"
-              title="Meet Fraction Monsters"
-              desc="Make friends with colorful monsters who love math! They'll help you on your quest!"
+              title={t("Meet Fraction Monsters")}
+              desc={t("Make friends with colorful monsters who love math! They'll help you on your quest!")}
               color="var(--purple)"
             />
           </div>
@@ -373,12 +382,12 @@ function Landing() {
       >
         <div style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem' }}>
           <img src={intelliaLogo} alt="Intellia 360" style={{ height: 36, width: 36, borderRadius: '50%', objectFit: 'cover', border: '2px solid var(--treasure)' }} />
-          <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--treasure)' }}>Intellia 360</span>
+          <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--treasure)' }}>{t("Intellia 360")}</span>
         </div>
         <div style={{ marginBottom: '0.5rem', fontSize: '1.5rem' }}>🏴‍☠️ ⛵ 🌊</div>
-        Powered by <strong style={{ color: 'var(--treasure)' }}>Intellia 360</strong> – Learn Through Adventure
+        {t("Powered by")} <strong style={{ color: 'var(--treasure)' }}>{t("Intellia 360")}</strong> – {t("Learn Through Adventure")}
         <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', opacity: 0.5 }}>
-          "Every Fraction Unlocks a New Treasure!"
+          "{t("Every Fraction Unlocks a New Treasure!")}"
         </div>
       </footer>
     </div>

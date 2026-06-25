@@ -44,7 +44,7 @@ const storyBeats = [
 ];
 
 /* ─── End-of-level transition story ─── */
-function TransitionModal({ onContinue }) {
+function TransitionModal({ onContinue, t }) {
   return (
     <div style={{
       position: 'fixed', inset: 0, zIndex: 200,
@@ -108,7 +108,7 @@ function TransitionModal({ onContinue }) {
           color: 'var(--primary-dark)',
           marginBottom: '0.5rem',
         }}>
-          🎉 Map Assembled!
+          {t("🎉 Map Assembled!")}
         </h2>
 
         <div style={{
@@ -127,13 +127,13 @@ function TransitionModal({ onContinue }) {
             fontStyle: 'italic',
             marginBottom: '0.5rem',
           }}>
-            "Extraordinary work, young explorer! You've decoded all my fraction clues and reassembled the map! See there — it points to the ancient Jungle Bridge…"
+            {t("\"Extraordinary work, young explorer! You've decoded all my fraction clues and reassembled the map! See there — it points to the ancient Jungle Bridge…\"")}
           </p>
           <div style={{
             fontFamily: 'var(--font-heading)',
             fontSize: '0.9rem',
             color: 'var(--primary)',
-          }}>— Captain Blackbeard's Ghost</div>
+          }}>— {t("Captain Blackbeard's Ghost")}</div>
         </div>
 
         <div style={{
@@ -147,7 +147,7 @@ function TransitionModal({ onContinue }) {
           color: '#92400E',
           lineHeight: 1.6,
         }}>
-          🌿 <strong>The map glows!</strong> It reveals a <strong>jungle path</strong> leading to a crumbling bridge over a roaring river. But the bridge is <strong>broken</strong> — scattered stones with mysterious fraction engravings are the only way to rebuild it…
+          🌿 <strong>{t("The map glows!")}</strong> {t("It reveals a")} <strong>{t("jungle path")}</strong> {t("leading to a crumbling bridge over a roaring river. But the bridge is")} <strong>{t("broken")}</strong> {t("— scattered stones with mysterious fraction engravings are the only way to rebuild it…")}
         </div>
 
         <div style={{
@@ -158,11 +158,11 @@ function TransitionModal({ onContinue }) {
           marginBottom: '1.5rem',
           fontSize: '1.5rem',
         }}>
-          🏖️ <span style={{ fontFamily: 'var(--font-fun)', fontSize: '0.9rem', color: '#6B7280' }}>Beach Complete</span>
+          🏖️ <span style={{ fontFamily: 'var(--font-fun)', fontSize: '0.9rem', color: '#6B7280' }}>{t("Beach Complete")}</span>
           →
-          🌿 <span style={{ fontFamily: 'var(--font-fun)', fontSize: '0.9rem', color: 'var(--primary)', fontWeight: 700 }}>Jungle Bridge</span>
+          🌿 <span style={{ fontFamily: 'var(--font-fun)', fontSize: '0.9rem', color: 'var(--primary)', fontWeight: 700 }}>{t("Jungle Bridge")}</span>
           →
-          🌋 <span style={{ fontFamily: 'var(--font-fun)', fontSize: '0.9rem', color: '#9CA3AF' }}>Volcano</span>
+          🌋 <span style={{ fontFamily: 'var(--font-fun)', fontSize: '0.9rem', color: '#9CA3AF' }}>{t("Volcano")}</span>
         </div>
 
         <button
@@ -188,7 +188,7 @@ function TransitionModal({ onContinue }) {
             e.currentTarget.style.boxShadow = 'var(--shadow-lg)';
           }}
         >
-          🌿 Head to the Jungle Bridge →
+          {t("🌿 Head to the Jungle Bridge →")}
         </button>
       </div>
     </div>
@@ -196,7 +196,7 @@ function TransitionModal({ onContinue }) {
 }
 
 function Level1() {
-  const { addCoins, addXp, unlockLevel } = useGame();
+  const { addCoins, addXp, unlockLevel, t } = useGame();
   const navigate = useNavigate();
   const [currentStage, setCurrentStage] = useState(0);
   const [feedback, setFeedback] = useState(null);
@@ -292,7 +292,7 @@ function Level1() {
               letterSpacing: '0.05em', textTransform: 'uppercase',
               marginBottom: '1rem',
             }}>
-              📖 Chapter 1 of 3
+              📖 {t("Chapter 1 of 3")}
             </div>
 
             <h2 style={{
@@ -301,7 +301,7 @@ function Level1() {
               color: 'var(--primary-dark)',
               marginBottom: '0.25rem',
             }}>
-              🏖️ Beach Landing
+              🏖️ {t("Level 1: Beach Landing")}
             </h2>
             <h3 style={{
               fontFamily: 'var(--font-fun)',
@@ -310,7 +310,7 @@ function Level1() {
               fontWeight: 700,
               marginBottom: '1.25rem',
             }}>
-              The Mystery of the Torn Map
+              {t("The Mystery of the Torn Map")}
             </h3>
 
             {/* Story text */}
@@ -326,16 +326,14 @@ function Level1() {
                 <span style={{ fontSize: '2.5rem', flexShrink: 0 }}>🏴‍☠️</span>
                 <div>
                   <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.85rem', color: 'var(--primary)', marginBottom: '0.3rem' }}>
-                    Captain Blackbeard's Ghost
+                    {t("Captain Blackbeard's Ghost")}
                   </div>
                   <p style={{
                     fontFamily: 'var(--font-fun)', fontSize: '0.95rem',
                     color: 'var(--text-parchment)', lineHeight: 1.6,
                     fontStyle: 'italic',
                   }}>
-                    "Arrr! Me ship crashed on this very beach and the map was torn to pieces by the storm!
-                    Each fragment is coded with a fraction — decode them all to reassemble the map
-                    and discover where I hid the legendary Fraction Treasure!"
+                    {t("\"Arrr! Me ship crashed on this very beach and the map was torn to pieces by the storm! Each fragment is coded with a fraction — decode them all to reassemble the map and discover where I hid the legendary Fraction Treasure!\"")}
                   </p>
                 </div>
               </div>
@@ -343,10 +341,10 @@ function Level1() {
 
             <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
               <div className="badge-coin" style={{ fontSize: '0.9rem' }}>
-                🪙 {CONFIG.coinsPerAnswer} coins per clue
+                🪙 {CONFIG.coinsPerAnswer} {t("coins per clue")}
               </div>
               <div className="badge-xp" style={{ fontSize: '0.9rem' }}>
-                ⭐ {CONFIG.xpPerAnswer} XP per clue
+                ⭐ {CONFIG.xpPerAnswer} {t("XP per clue")}
               </div>
               <div style={{
                 background: 'rgba(233,196,106,0.2)', border: '2px solid #E9C46A',
@@ -354,7 +352,7 @@ function Level1() {
                 fontFamily: 'var(--font-fun)', fontWeight: 700, fontSize: '0.9rem',
                 color: '#92400E',
               }}>
-                📜 {CONFIG.questionsPerSession} map fragments
+                📜 {CONFIG.questionsPerSession} {t("map fragments")}
               </div>
             </div>
 
@@ -363,7 +361,7 @@ function Level1() {
               onClick={() => setShowIntro(false)}
               style={{ fontSize: '1.15rem', padding: '1rem 3rem' }}
             >
-              ⚓ Set Sail for the Treasure!
+              ⚓ {t("Set Sail for the Treasure!")}
             </button>
           </div>
         </div>
@@ -379,7 +377,7 @@ function Level1() {
       overflow: 'hidden',
     }}>
       {/* Transition modal */}
-      {showTransition && <TransitionModal onContinue={handleTransitionContinue} />}
+      {showTransition && <TransitionModal onContinue={handleTransitionContinue} t={t} />}
 
       {/* Beach background */}
       <div style={{
@@ -396,20 +394,20 @@ function Level1() {
         position: 'sticky', top: 0, zIndex: 50,
       }}>
         <Link to="/simulation" className="btn btn-secondary" style={{ fontSize: '0.8rem', padding: '0.4rem 0.8rem' }}>
-          🏝️ Back to Map
+          🏝️ {t("Back to Map")}
         </Link>
         <div style={{
           fontFamily: 'var(--font-heading)', fontSize: '1.2rem',
           textShadow: '2px 2px 0 rgba(0,0,0,0.3)',
           display: 'flex', alignItems: 'center', gap: '0.5rem',
         }}>
-          🏖️ Beach Landing — The Torn Map
+          🏖️ {t("Beach Landing — The Torn Map")}
         </div>
         <div style={{
           fontFamily: 'var(--font-fun)', fontWeight: 700, fontSize: '0.9rem',
           display: 'flex', alignItems: 'center', gap: '0.5rem',
         }}>
-          🗺️ Fragment {currentStage + 1} / {stages.length}
+          🗺️ {t("Fragment")} {currentStage + 1} / {stages.length}
         </div>
       </header>
 
@@ -463,13 +461,13 @@ function Level1() {
               color: 'rgba(255,255,255,0.88)', lineHeight: 1.6,
               fontStyle: 'italic', margin: 0,
             }}>
-              "{beat.characterSays}"
+              "{t(beat.characterSays)}"
             </p>
             <div style={{
               marginTop: '0.5rem', fontSize: '0.82rem',
               color: 'rgba(255,255,255,0.45)', fontFamily: 'var(--font-fun)',
             }}>
-              📖 {beat.narrator}
+              📖 {t(beat.narrator)}
             </div>
           </div>
         </div>
@@ -493,7 +491,7 @@ function Level1() {
             fontFamily: 'var(--font-fun)', fontWeight: 700,
             marginBottom: '1rem',
           }}>
-            🗺️ Map Fragment {currentStage + 1}
+            🗺️ {t("Map Fragment")} {currentStage + 1}
           </div>
 
           {/* Question */}
@@ -504,7 +502,7 @@ function Level1() {
             marginBottom: '2rem',
             lineHeight: 1.4,
           }}>
-            {stage.question}
+            {t(stage.question)}
           </h3>
 
           {/* Options */}
@@ -580,13 +578,13 @@ function Level1() {
                   fontSize: '2rem', color: 'var(--success)',
                   textShadow: '2px 2px 0 rgba(6, 214, 160, 0.2)',
                 }}>
-                  Map Fragment Found!
+                  {t("Map Fragment Found!")}
                 </div>
                 <div style={{ fontFamily: 'var(--font-fun)', fontSize: '0.95rem', color: 'var(--text-parchment)', fontStyle: 'italic' }}>
-                  "Magnificent, young explorer!" — Blackbeard
+                  {t("\"Magnificent, young explorer!\" — Blackbeard")}
                 </div>
                 <div className="badge-coin" style={{ fontSize: '1.1rem', padding: '0.4rem 1.2rem' }}>
-                  🪙 +{CONFIG.coinsPerAnswer} Coins!
+                  🪙 +{CONFIG.coinsPerAnswer} {t("Coins!")}
                 </div>
               </div>
             </div>
@@ -608,9 +606,9 @@ function Level1() {
                 boxShadow: 'var(--shadow-lg)',
                 textAlign: 'center',
               }}>
-                🌊 Wrong Fragment!
+                🌊 {t("Wrong Fragment!")}
                 <div style={{ fontSize: '1rem', marginTop: '0.3rem', color: '#9CA3AF' }}>
-                  Try again, explorer!
+                  {t("Try again, explorer!")}
                 </div>
               </div>
             </div>
@@ -623,7 +621,7 @@ function Level1() {
           fontFamily: 'var(--font-fun)',
           color: 'var(--text-muted)', fontSize: '0.9rem',
         }}>
-          💡 <em>{stage.hint || 'Tip: Count the colored parts vs. total parts!'}</em>
+          💡 <em>{t(stage.hint || "Tip: Count the colored parts vs. total parts!")}</em>
         </div>
 
         {/* Image strip */}

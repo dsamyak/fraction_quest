@@ -550,6 +550,339 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =======================================
+   INTERACTIVE ADVENTURE STYLES
+   ======================================= */
+
+/* Full-screen scene container */
+.adventure-scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+.adventure-scene__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Hotspot base */
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 10;
+}
+
+.hotspot:hover {
+  transform: scale(1.15);
+}
+
+.hotspot::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px dashed rgba(233, 196, 106, 0.5);
+  animation: hotspotPulse 2s ease-in-out infinite;
+}
+
+.hotspot--discovered::before {
+  display: none;
+}
+
+.hotspot--discovered {
+  pointer-events: none;
+}
+
+/* Narration bar */
+.narration-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: linear-gradient(180deg, rgba(27, 67, 50, 0), rgba(27, 67, 50, 0.85) 20%, rgba(11, 30, 20, 0.95) 100%);
+  padding: 2rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.narration-text {
+  font-family: var(--font-fun);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.7;
+  text-align: center;
+  max-width: 700px;
+  min-height: 2.4rem;
+}
+
+.narration-character {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: #E9C46A;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Collectible HUD */
+.adventure-hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(180deg, rgba(11, 30, 20, 0.92) 0%, rgba(11, 30, 20, 0.7) 80%, rgba(27, 67, 50, 0) 100%);
+}
+
+/* Speech bubble */
+.speech-bubble {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid #E9C46A;
+  border-radius: 16px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-fun);
+  font-size: 0.9rem;
+  color: var(--text-parchment);
+  max-width: 220px;
+  animation: speechBubbleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 30;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.95);
+}
+
+/* Click particle */
+.click-particle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  font-size: 1.5rem;
+  animation: particleBurst 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Pop effect overlay */
+.pop-effect {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(233, 196, 106, 0.6), rgba(231, 111, 81, 0.3), transparent);
+  animation: popRipple 0.6s ease-out forwards;
+}
+
+/* Collect fly element */
+.collect-fly {
+  position: fixed;
+  z-index: 200;
+  pointer-events: none;
+  animation: collectFly 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Floating text */
+.floating-text {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  animation: floatUpFade 1.2s ease-out forwards;
+}
+
+/* Scene transition */
+.scene-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: #0B1E14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scene-transition--enter {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.scene-transition--exit {
+  animation: fadeOut 0.5s ease-in forwards;
+}
+
+/* Challenge overlay */
+.challenge-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: radial-gradient(ellipse at center, rgba(27, 67, 50, 0.92), rgba(11, 30, 20, 0.97));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out forwards;
+  backdrop-filter: blur(6px);
+}
+
+/* =======================================
+   ADVENTURE ANIMATIONS
+   ======================================= */
+@keyframes hotspotPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes popAndDisappear {
+  0% { transform: scale(1); opacity: 1; }
+  40% { transform: scale(1.6); opacity: 0.8; }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+@keyframes popRipple {
+  0% { transform: scale(0); opacity: 0.8; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+@keyframes collectFly {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.3) translateY(-80vh); opacity: 0; }
+}
+
+@keyframes speechBubbleIn {
+  0% { transform: scale(0) translateY(10px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+@keyframes particleBurst {
+  0% { transform: translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(var(--tx, 50px), var(--ty, -60px)) scale(0); opacity: 0; }
+}
+
+@keyframes floatUpFade {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-60px); opacity: 0; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes shakeWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-8deg); }
+  40% { transform: rotate(8deg); }
+  60% { transform: rotate(-5deg); }
+  80% { transform: rotate(5deg); }
+}
+
+@keyframes bounceJoy {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-15px) scale(1.1); }
+  50% { transform: translateY(0); }
+  70% { transform: translateY(-8px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(233, 196, 106, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(233, 196, 106, 0.8), 0 0 50px rgba(233, 196, 106, 0.3); }
+}
+
+@keyframes flipReveal {
+  0% { transform: perspective(600px) rotateY(0deg); }
+  50% { transform: perspective(600px) rotateY(90deg); }
+  100% { transform: perspective(600px) rotateY(0deg); }
+}
+
+@keyframes typeChar {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes treasureOpen {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.1) rotate(-3deg); }
+  60% { transform: scale(1.2) rotate(2deg); }
+  100% { transform: scale(1.15) rotate(0deg); }
+}
+
+@keyframes fireworkBurst {
+  0% { transform: scale(0); opacity: 1; }
+  50% { opacity: 1; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+/* Interactive hint indicator */
+.interact-hint {
+  position: absolute;
+  font-size: 1.4rem;
+  animation: float 2s ease-in-out infinite, sparkle 3s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 15;
+  filter: drop-shadow(0 0 6px rgba(233, 196, 106, 0.8));
+}
+
+/* Scene progress dots */
+.scene-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.scene-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.scene-dot--active {
+  background: #E9C46A;
+  border-color: #E9C46A;
+  transform: scale(1.3);
+  box-shadow: 0 0 8px rgba(233, 196, 106, 0.6);
+}
+
+.scene-dot--completed {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+/* =======================================
    PRINT STYLES
    ======================================= */
 @media print {

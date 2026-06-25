@@ -8,7 +8,7 @@ import levelVolcano from '../assets/level-volcano.png';
 import intelliaLogo from '../assets/intellia-logo.jpeg';
 
 function SimulationHome() {
-  const { coins, xp, unlockedLevels, rank } = useGame();
+  const { coins, xp, unlockedLevels, rank, t } = useGame();
 
   return (
     <div style={{
@@ -43,7 +43,7 @@ function SimulationHome() {
         zIndex: 50,
       }}>
         <Link to="/" className="btn btn-secondary" style={{ fontSize: '0.85rem', padding: '0.5rem 1rem' }}>
-          ⬅ Back to Harbor
+          ⬅ {t("Back to Harbor")}
         </Link>
 
         <div style={{
@@ -59,7 +59,7 @@ function SimulationHome() {
             border: '2px solid rgba(255,255,255,0.5)',
             boxShadow: '0 2px 6px rgba(0,0,0,0.3)',
           }} />
-          🏝️ Fraction Island Quest
+          🏝️ {t("Fraction Island Quest")}
         </div>
 
         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
@@ -67,7 +67,7 @@ function SimulationHome() {
             <span className="animate-coin-spin">🪙</span> {coins}
           </div>
           <div className="badge-xp">
-            ⭐ {xp} XP
+            ⭐ {xp} {t("XP!")}
           </div>
         </div>
       </header>
@@ -88,7 +88,7 @@ function SimulationHome() {
           marginBottom: '0.25rem',
           textShadow: '2px 2px 0 rgba(45, 106, 79, 0.1)',
         }}>
-          🗺️ Choose Your Path, Explorer!
+          🗺️ {t("Choose Your Path, Explorer!")}
         </div>
         <div style={{
           display: 'inline-flex',
@@ -103,7 +103,7 @@ function SimulationHome() {
           fontSize: '0.9rem',
           boxShadow: 'var(--shadow-sm)',
         }}>
-          🎖️ Rank: {rank}
+          🎖️ {t("Rank:")} {rank}
         </div>
       </div>
 
@@ -130,37 +130,40 @@ function SimulationHome() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: '2rem' }}>
           <LevelCard
-            title="Level 1: Beach Landing"
-            desc="Match fractions to pictures on the sandy shores. Start your adventure here!"
+            title={t("Level 1: Beach Landing")}
+            desc={t("Match fractions to pictures on the sandy shores. Start your adventure here!")}
             icon="🏖️"
             image={levelBeach}
             path="/simulation/level1"
             status={unlockedLevels.includes('level1') ? 'unlocked' : 'locked'}
-            reward="10 coins per answer"
-            difficulty="Easy"
+            reward={t("10 coins per answer")}
+            difficulty={t("Easy")}
             diffColor="var(--success)"
+            t={t}
           />
           <LevelCard
-            title="Level 2: Bridge Builder"
-            desc="Find equivalent fractions to build bridges across the jungle river!"
+            title={t("Level 2: Bridge Builder")}
+            desc={t("Find equivalent fractions to build bridges across the jungle river!")}
             icon="🌉"
             image={levelBridge}
             path="/simulation/level2"
             status={unlockedLevels.includes('level2') ? 'unlocked' : 'locked'}
-            reward="15 coins per answer"
-            difficulty="Medium"
+            reward={t("15 coins per answer")}
+            difficulty={t("Medium")}
             diffColor="var(--accent)"
+            t={t}
           />
           <LevelCard
-            title="Level 3: Volcano Battle"
-            desc="Compare fractions to defeat the mighty Fraction Monster at the volcano!"
+            title={t("Level 3: Volcano Battle")}
+            desc={t("Compare fractions to defeat the mighty Fraction Monster at the volcano!")}
             icon="🌋"
             image={levelVolcano}
             path="/simulation/level3"
             status={unlockedLevels.includes('level3') ? 'unlocked' : 'locked'}
-            reward="20 coins per answer"
-            difficulty="Hard"
+            reward={t("20 coins per answer")}
+            difficulty={t("Hard")}
             diffColor="var(--danger)"
+            t={t}
           />
         </div>
       </main>
@@ -184,13 +187,13 @@ function SimulationHome() {
         zIndex: 40,
       }}>
         <img src={intelliaLogo} alt="Intellia 360" style={{ height: 24, width: 24, borderRadius: '50%', objectFit: 'cover', border: '1.5px solid #B8860B' }} />
-        <span>⛵ Powered by <strong>Intellia 360</strong> – "Every Fraction Unlocks a New Treasure!" 🏴‍☠️</span>
+        <span>⛵ {t("Powered by")} <strong>{t("Intellia 360")}</strong> – "{t("Every Fraction Unlocks a New Treasure!")}" 🏴‍☠️</span>
       </footer>
     </div>
   );
 }
 
-function LevelCard({ title, desc, icon, image, path, status, reward, difficulty, diffColor }) {
+function LevelCard({ title, desc, icon, image, path, status, reward, difficulty, diffColor, t }) {
   const isLocked = status === 'locked';
 
   return (
@@ -330,7 +333,7 @@ function LevelCard({ title, desc, icon, image, path, status, reward, difficulty,
               cursor: 'not-allowed',
             }}
           >
-            🔒 Complete Previous Level
+            🔒 {t("Complete Previous Level")}
           </button>
         ) : (
           <Link
@@ -344,7 +347,7 @@ function LevelCard({ title, desc, icon, image, path, status, reward, difficulty,
               padding: '0.85rem',
             }}
           >
-            ⚔️ Start Adventure!
+            ⚔️ {t("Start Adventure!")}
           </Link>
         )}
       </div>

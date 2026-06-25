@@ -44,7 +44,7 @@ const storyBeats = [
 ];
 
 /* ─── End-of-level transition modal ─── */
-function TransitionModal({ onContinue }) {
+function TransitionModal({ onContinue, t }) {
   return (
     <div style={{
       position: 'fixed', inset: 0, zIndex: 200,
@@ -95,7 +95,7 @@ function TransitionModal({ onContinue }) {
           color: 'var(--primary-dark)',
           marginBottom: '0.5rem',
         }}>
-          🎉 Bridge Restored!
+          {t("🎉 Bridge Restored!")}
         </h2>
 
         <div style={{
@@ -114,10 +114,10 @@ function TransitionModal({ onContinue }) {
             fontStyle: 'italic',
             marginBottom: '0.5rem',
           }}>
-            "HA-HAAR! You matched every equivalent fraction stone perfectly! The bridge holds! Now cross the river and follow the path to the volcano — that's where I hid the treasure… but beware the guardian I left behind!"
+            {t("\"HA-HAAR! You matched every equivalent fraction stone perfectly! The bridge holds! Now cross the river and follow the path to the volcano — that's where I hid the treasure… but beware the guardian I left behind!\"")}
           </p>
           <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.9rem', color: 'var(--primary)' }}>
-            — Captain Blackbeard's Ghost
+            — {t("Captain Blackbeard's Ghost")}
           </div>
         </div>
 
@@ -131,9 +131,9 @@ function TransitionModal({ onContinue }) {
           fontFamily: 'var(--font-fun)',
           color: '#92400E',
           lineHeight: 1.6,
-        }}>
-          🌋 <strong>You cross the bridge</strong> and discover a <strong>glowing cave</strong> leading toward the volcano. The air grows hot and smoky. Deep rumbling echoes suggest something <strong>ancient and powerful</strong> is guarding what lies within…
-        </div>
+        }} 
+        dangerouslySetInnerHTML={{ __html: t("🌋 <strong>You cross the bridge</strong> and discover a <strong>glowing cave</strong> leading toward the volcano. The air grows hot and smoky. Deep rumbling echoes suggest something <strong>ancient and powerful</strong> is guarding what lies within…") }}
+        />
 
         <div style={{
           display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -169,7 +169,7 @@ function TransitionModal({ onContinue }) {
             e.currentTarget.style.boxShadow = '0 4px 20px rgba(239,68,68,0.4)';
           }}
         >
-          🌋 Face the Volcano Guardian →
+          {t("🌋 Face the Volcano Guardian →")}
         </button>
       </div>
     </div>
@@ -177,7 +177,7 @@ function TransitionModal({ onContinue }) {
 }
 
 function Level2() {
-  const { addCoins, addXp, unlockLevel } = useGame();
+  const { addCoins, addXp, unlockLevel, t } = useGame();
   const navigate = useNavigate();
   const [currentStage, setCurrentStage] = useState(0);
   const [feedback, setFeedback] = useState(null);
@@ -267,7 +267,7 @@ function Level2() {
               letterSpacing: '0.05em', textTransform: 'uppercase',
               marginBottom: '1rem',
             }}>
-              📖 Chapter 2 of 3
+              📖 {t("Chapter 2 of 3")}
             </div>
 
             <h2 style={{
@@ -276,7 +276,7 @@ function Level2() {
               color: 'var(--primary-dark)',
               marginBottom: '0.25rem',
             }}>
-              🌉 Jungle Bridge Builder
+              {t("🌉 Jungle Bridge Builder")}
             </h2>
             <h3 style={{
               fontFamily: 'var(--font-fun)',
@@ -285,7 +285,7 @@ function Level2() {
               fontWeight: 700,
               marginBottom: '1.25rem',
             }}>
-              The Equivalent Stone Mystery
+              {t("The Equivalent Stone Mystery")}
             </h3>
 
             <div style={{
@@ -300,31 +300,29 @@ function Level2() {
                 <span style={{ fontSize: '2.5rem', flexShrink: 0 }}>🏴‍☠️</span>
                 <div>
                   <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.85rem', color: 'var(--primary)', marginBottom: '0.3rem' }}>
-                    Captain Blackbeard's Ghost
+                    {t("Captain Blackbeard's Ghost")}
                   </div>
                   <p style={{
                     fontFamily: 'var(--font-fun)', fontSize: '0.95rem',
                     color: 'var(--text-parchment)', lineHeight: 1.6,
                     fontStyle: 'italic',
                   }}>
-                    "Excellent work on the beach, explorer! But now ye face the ancient jungle bridge — it collapsed long ago!
-                    I built it with EQUIVALENT fraction stones — each pair of equal fractions forms one span.
-                    Find the matching stones to rebuild the bridge and cross the river!"
+                    {t("\"Excellent work on the beach, explorer! But now ye face the ancient jungle bridge — it collapsed long ago! I built it with EQUIVALENT fraction stones — each pair of equal fractions forms one span. Find the matching stones to rebuild the bridge and cross the river!\"")}
                   </p>
                 </div>
               </div>
             </div>
 
             <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
-              <div className="badge-coin" style={{ fontSize: '0.9rem' }}>🪙 {CONFIG.coinsPerAnswer} coins per stone</div>
-              <div className="badge-xp" style={{ fontSize: '0.9rem' }}>⭐ {CONFIG.xpPerAnswer} XP per stone</div>
+              <div className="badge-coin" style={{ fontSize: '0.9rem' }}>🪙 {CONFIG.coinsPerAnswer} {t("coins per stone")}</div>
+              <div className="badge-xp" style={{ fontSize: '0.9rem' }}>⭐ {CONFIG.xpPerAnswer} {t("XP per stone")}</div>
               <div style={{
                 background: 'rgba(82,183,136,0.15)', border: '2px solid #52B788',
                 borderRadius: 'var(--radius-full)', padding: '0.3rem 0.8rem',
                 fontFamily: 'var(--font-fun)', fontWeight: 700, fontSize: '0.9rem',
                 color: '#065F46',
               }}>
-                🌉 {CONFIG.questionsPerSession} bridge spans
+                🌉 {CONFIG.questionsPerSession} {t("bridge spans")}
               </div>
             </div>
 
@@ -333,7 +331,7 @@ function Level2() {
               onClick={() => setShowIntro(false)}
               style={{ fontSize: '1.15rem', padding: '1rem 3rem' }}
             >
-              🌿 Enter the Jungle!
+              {t("🌿 Enter the Jungle!")}
             </button>
           </div>
         </div>
@@ -347,7 +345,7 @@ function Level2() {
       background: 'linear-gradient(180deg, #87CEEB 0%, #C5E8D5 40%, #52B788 100%)',
       position: 'relative', overflow: 'hidden',
     }}>
-      {showTransition && <TransitionModal onContinue={() => navigate('/simulation')} />}
+      {showTransition && <TransitionModal onContinue={() => navigate('/simulation')} t={t} />}
 
       {/* Jungle background */}
       <div style={{
@@ -368,20 +366,20 @@ function Level2() {
         position: 'sticky', top: 0, zIndex: 50,
       }}>
         <Link to="/simulation" className="btn btn-secondary" style={{ fontSize: '0.8rem', padding: '0.4rem 0.8rem' }}>
-          🏝️ Back to Map
+          🏝️ {t("Back to Map")}
         </Link>
         <div style={{
           fontFamily: 'var(--font-heading)', fontSize: '1.2rem',
           textShadow: '2px 2px 0 rgba(0,0,0,0.3)',
           display: 'flex', alignItems: 'center', gap: '0.5rem',
         }}>
-          🌉 Jungle Bridge — The Equivalent Stones
+          {t("🌉 Jungle Bridge — The Equivalent Stones")}
         </div>
         <div style={{
           fontFamily: 'var(--font-fun)', fontWeight: 700, fontSize: '0.9rem',
           display: 'flex', alignItems: 'center', gap: '0.5rem',
         }}>
-          🪨 Stone {currentStage + 1} / {stages.length}
+          {t("🪨 Stone")} {currentStage + 1} / {stages.length}
         </div>
       </header>
 
@@ -417,20 +415,20 @@ function Level2() {
               color: '#86efac', marginBottom: '0.4rem',
               letterSpacing: '0.05em', textTransform: 'uppercase',
             }}>
-              {beat.characterName} says:
+              {t(beat.characterName)} {t("says:")}
             </div>
             <p style={{
               fontFamily: 'var(--font-fun)', fontSize: '0.95rem',
               color: 'rgba(255,255,255,0.88)', lineHeight: 1.6,
               fontStyle: 'italic', margin: 0,
             }}>
-              "{beat.characterSays}"
+              "{t(beat.characterSays)}"
             </p>
             <div style={{
               marginTop: '0.5rem', fontSize: '0.82rem',
               color: 'rgba(255,255,255,0.45)', fontFamily: 'var(--font-fun)',
             }}>
-              📖 {beat.narrator}
+              📖 {t(beat.narrator)}
             </div>
           </div>
         </div>
@@ -452,7 +450,7 @@ function Level2() {
             fontFamily: 'var(--font-fun)', fontWeight: 700,
             marginBottom: '1rem',
           }}>
-            🪨 Bridge Span {currentStage + 1}
+            {t("🪨 Bridge Span")} {currentStage + 1}
           </div>
 
           <h3 style={{
@@ -462,7 +460,7 @@ function Level2() {
             marginBottom: '0.75rem',
             lineHeight: 1.4,
           }}>
-            {stage.instruction}
+            {t(stage.instruction)}
           </h3>
 
           {/* Target fraction display */}
@@ -612,13 +610,13 @@ function Level2() {
               }}>
                 <span style={{ fontSize: '3rem' }}>🌉</span>
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', color: 'var(--primary-dark)' }}>
-                  Span Complete!
+                  {t("Span Complete!")}
                 </div>
                 <div style={{ fontFamily: 'var(--font-fun)', fontSize: '0.9rem', color: '#6B7280', fontStyle: 'italic' }}>
-                  "The equivalent stone locks in perfectly!" — Blackbeard
+                  {t("\"The equivalent stone locks in perfectly!\" — Blackbeard")}
                 </div>
                 <div className="badge-coin" style={{ fontSize: '1rem' }}>
-                  🪙 +{CONFIG.coinsPerAnswer} Coins!
+                  🪙 +{CONFIG.coinsPerAnswer} {t("Coins!")}
                 </div>
               </div>
             </div>
@@ -640,9 +638,9 @@ function Level2() {
                 boxShadow: 'var(--shadow-lg)',
                 textAlign: 'center',
               }}>
-                🌊 Splash! Wrong Stone!
+                {t("🌊 Splash! Wrong Stone!")}
                 <div style={{ fontSize: '0.95rem', marginTop: '0.3rem', color: '#9CA3AF' }}>
-                  That fraction isn't equivalent!
+                  {t("That fraction isn't equivalent!")}
                 </div>
               </div>
             </div>
@@ -655,7 +653,7 @@ function Level2() {
           fontFamily: 'var(--font-fun)',
           color: 'var(--text-muted)', fontSize: '0.9rem',
         }}>
-          💡 <em>Tip: Multiply or divide both the top and bottom by the same number to find equivalent fractions!</em>
+          💡 <em>{t("Tip: Multiply or divide both the top and bottom by the same number to find equivalent fractions!")}</em>
         </div>
 
         {/* Image strip */}
